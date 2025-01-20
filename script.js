@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     };
 
-    const skills = ["Updating many more.."];
+    const skills = ["HTML", "CSS", "JavaScript", "React", "Node.js", "Git & GitHub", "Responsive Design"];
 
     const projects = [
         {
@@ -83,29 +83,36 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Apply dark mode styles if the class is active
-    if (!document.styleSheets[0].rules.some(rule => rule.selectorText === '.dark-mode')) {
-        const darkModeStyles = `
-            .dark-mode {
-                background-color: #333;
-                color: #fff;
-            }
-            .dark-mode nav {
-                background-color: #1c1c1c;
-            }
-            .dark-mode footer {
-                background-color: #1c1c1c;
-            }
-            .dark-mode .skills-list li {
-                background-color: #444;
-                border-color: #555;
-            }
-            .dark-mode a {
-                color: #4ca1ff;
-            }
-        `;
-        const styleSheet = document.createElement('style');
-        styleSheet.type = 'text/css';
-        styleSheet.innerText = darkModeStyles;
-        document.head.appendChild(styleSheet);
-    }
+    const darkModeStyles = `
+        .dark-mode {
+            background-color: #1c1c1c;
+            color:rgb(153, 179, 46);
+        }
+        .dark-mode nav {
+            background-color: #1c1c1c;
+        }
+        .dark-mode footer {
+            background-color: #1c1c1c;
+        }
+        .dark-mode .skills-list li {
+            background-color: #444;
+            border-color: #555;
+        }
+        .dark-mode a {
+            color: #4ca1ff;
+        }
+        .dark-mode .profile-container h1,
+        .dark-mode .profile-container p,
+        .dark-mode .nav-links a,
+        .dark-mode section h2,
+        .dark-mode .skills-list li,
+        .dark-mode .social-icons a,
+        .dark-mode footer {
+            color:rgb(153, 179, 46);
+        }
+    `;
+    const styleSheet = document.createElement('style');
+    styleSheet.type = 'text/css';
+    styleSheet.innerText = darkModeStyles;
+    document.head.appendChild(styleSheet);
 });
